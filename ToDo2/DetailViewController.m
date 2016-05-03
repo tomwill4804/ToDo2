@@ -21,11 +21,10 @@
 //
 - (void)setDetailItem:(id)newDetailItem {
     
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (newDetailItem) {
+    _detailItem = newDetailItem;
         
         [self configureView];
-        
     }
 }
 
@@ -42,7 +41,7 @@
         
         self.descTextField.text = [[self.detailItem valueForKey:@"desc"] description];
         self.dueDateField.text = [[self.detailItem valueForKey:@"duedate"] description];
-        self.doneSwitch.selected = [[self.detailItem valueForKey:@"done"] boolValue];
+        self.doneSwitch.on = [[self.detailItem valueForKey:@"done"] boolValue];
         self.noteText.text = [[self.detailItem valueForKey:@"note"] description];
     }
     

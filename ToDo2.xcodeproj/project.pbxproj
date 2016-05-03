@@ -15,6 +15,7 @@
 		E3B66B0B1CD91645007352BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B66B091CD91645007352BB /* Main.storyboard */; };
 		E3B66B0D1CD91645007352BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B66B0C1CD91645007352BB /* Assets.xcassets */; };
 		E3B66B101CD91645007352BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B66B0E1CD91645007352BB /* LaunchScreen.storyboard */; };
+		E3B66B191CD953EB007352BB /* MasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B181CD953EB007352BB /* MasterCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		E3B66B0C1CD91645007352BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B66B0F1CD91645007352BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3B66B111CD91645007352BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3B66B171CD953EB007352BB /* MasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterCell.h; sourceTree = "<group>"; };
+		E3B66B181CD953EB007352BB /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 			children = (
 				E3B66AFD1CD91645007352BB /* AppDelegate.h */,
 				E3B66AFE1CD91645007352BB /* AppDelegate.m */,
+				E3B66B171CD953EB007352BB /* MasterCell.h */,
+				E3B66B181CD953EB007352BB /* MasterCell.m */,
 				E3B66B031CD91645007352BB /* MasterViewController.h */,
 				E3B66B041CD91645007352BB /* MasterViewController.m */,
 				E3B66B061CD91645007352BB /* DetailViewController.h */,
@@ -160,6 +165,7 @@
 				E3B66B081CD91645007352BB /* DetailViewController.m in Sources */,
 				E3B66B051CD91645007352BB /* MasterViewController.m in Sources */,
 				E3B66AFF1CD91645007352BB /* AppDelegate.m in Sources */,
+				E3B66B191CD953EB007352BB /* MasterCell.m in Sources */,
 				E3B66B021CD91645007352BB /* ToDo2.xcdatamodeld in Sources */,
 				E3B66AFC1CD91645007352BB /* main.m in Sources */,
 			);

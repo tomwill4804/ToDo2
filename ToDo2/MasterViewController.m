@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "MasterCell.h"
 
 @interface MasterViewController ()
 
@@ -104,7 +105,45 @@
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
     
-    cell.textLabel.text = [[object valueForKey:@"desc"] description];
+    MasterCell* mcell = (MasterCell*)cell;
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+    
+    mcell.descLabel.text = [[object valueForKey:@"desc"] description];
+    mcell.dateLabel.text = [[object valueForKey:@"duedate"] description];
+    mcell.doneSwitch.on = [[object valueForKey:@"done"] boolValue];
+  
+    
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    self.managedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    
+}
+
+
+-(IBAction)donePushed:(UISwitch*)sender{
+    
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    
+    self.managedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    [self.managedObject setValue:[NSNumber numberWithBool:sender.on] forKey:@"done"];
+    
+    //
+    //  save object
+    //
+    NSError *error = nil;
+    if (![self.managedObject.managedObjectContext save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    [self.detailViewController setDetailItem:self.managedObject];
+    
     
 }
 
