@@ -52,9 +52,9 @@
         self.managedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     }
     
-        [controller setDetailItem:self.managedObject];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+    [controller setDetailItem:self.managedObject];
+    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    controller.navigationItem.leftItemsSupplementBackButton = YES;
     
 }
 
