@@ -16,6 +16,7 @@
 		E3B66B0D1CD91645007352BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B66B0C1CD91645007352BB /* Assets.xcassets */; };
 		E3B66B101CD91645007352BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B66B0E1CD91645007352BB /* LaunchScreen.storyboard */; };
 		E3B66B191CD953EB007352BB /* MasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B181CD953EB007352BB /* MasterCell.m */; };
+		E3B66B1C1CD96B13007352BB /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B1B1CD96B13007352BB /* DateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		E3B66B111CD91645007352BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B66B171CD953EB007352BB /* MasterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterCell.h; sourceTree = "<group>"; };
 		E3B66B181CD953EB007352BB /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
+		E3B66B1A1CD96B13007352BB /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
+		E3B66B1B1CD96B13007352BB /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				E3B66B041CD91645007352BB /* MasterViewController.m */,
 				E3B66B061CD91645007352BB /* DetailViewController.h */,
 				E3B66B071CD91645007352BB /* DetailViewController.m */,
+				E3B66B1A1CD96B13007352BB /* DateViewController.h */,
+				E3B66B1B1CD96B13007352BB /* DateViewController.m */,
 				E3B66B091CD91645007352BB /* Main.storyboard */,
 				E3B66B0C1CD91645007352BB /* Assets.xcassets */,
 				E3B66B0E1CD91645007352BB /* LaunchScreen.storyboard */,
@@ -168,6 +173,7 @@
 				E3B66B191CD953EB007352BB /* MasterCell.m in Sources */,
 				E3B66B021CD91645007352BB /* ToDo2.xcdatamodeld in Sources */,
 				E3B66AFC1CD91645007352BB /* main.m in Sources */,
+				E3B66B1C1CD96B13007352BB /* DateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

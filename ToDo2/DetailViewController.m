@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DateViewController.h"
 
 @interface DetailViewController ()
 
@@ -42,7 +43,8 @@
         [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
         
         self.descTextField.text = [[self.detailItem valueForKey:@"desc"] description];
-        self.dueDateField.text = [[self.detailItem valueForKey:@"duedate"] description];
+        [self.dueDateField setTitle:[[self.detailItem valueForKey:@"duedate"] description]
+                           forState: UIControlStateNormal];
         self.doneSwitch.on = [[self.detailItem valueForKey:@"done"] boolValue];
         self.noteText.text = [[self.detailItem valueForKey:@"note"] description];
     }
@@ -82,7 +84,7 @@
     [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
     
     [self.detailItem setValue:self.descTextField.text  forKey:@"desc"];
-    [self.detailItem setValue:[dateFormatter dateFromString:self.dueDateField.text]
+    [self.detailItem setValue:[dateFormatter dateFromString:self.dueDateField.titleLabel.text]
                        forKey:@"duedate"];
     [self.detailItem setValue:[NSNumber numberWithBool:self.doneSwitch.on] forKey:@"done"];
     [self.detailItem setValue:self.noteText.text  forKey:@"note"];
@@ -96,8 +98,30 @@
         abort();
     }
     
+
+}
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    if ([[segue identifier] isEqualToString:@"date"]) {
+        DateViewController *controller = (DateViewController *)[segue destinationViewController];
+        controller.date = [self.detailItem valueForKey:@"duedate"];
+    }
     
+}
+
+
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    
+    if ([[segue identifier] isEqualToString:@"date"]) {
+        DateViewController *vc = (DateViewController *)segue.sourceViewController;
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+    }
+
+
 }
 
 @end
