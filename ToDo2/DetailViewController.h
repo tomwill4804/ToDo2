@@ -19,5 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *doneSwitch;
 @property (weak, nonatomic) IBOutlet UITextView *noteText;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
 @end
 

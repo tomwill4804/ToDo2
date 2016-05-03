@@ -22,10 +22,12 @@
 - (void)setDetailItem:(id)newDetailItem {
     
     if (newDetailItem) {
-    _detailItem = newDetailItem;
-        
+        _detailItem = newDetailItem;
         [self configureView];
+        self.saveButton.enabled = YES;
     }
+    else
+        self.saveButton.enabled = NO;
 }
 
 

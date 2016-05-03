@@ -17,6 +17,7 @@
 @implementation MasterViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
