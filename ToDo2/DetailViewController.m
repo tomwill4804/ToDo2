@@ -30,7 +30,10 @@
    
     if (self.detailItem) {
         
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        self.descTextField.text = [[self.detailItem valueForKey:@"desc"] description];
+        self.dueDateField.text = [[self.detailItem valueForKey:@"duedate"] description];
+        self.doneSwitch.enabled = [[self.detailItem valueForKey:@"done"] description];
+        self.noteText.text = [[self.detailItem valueForKey:@"note"] description];
     }
     
 }
