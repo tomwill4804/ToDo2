@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSManagedObject* detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
 @property (weak, nonatomic) IBOutlet UITextField *descTextField;
 @property (weak, nonatomic) IBOutlet UITextField *dueDateField;
 @property (weak, nonatomic) IBOutlet UISwitch *doneSwitch;

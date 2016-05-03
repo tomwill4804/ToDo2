@@ -30,9 +30,12 @@
    
     if (self.detailItem) {
         
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+        
         self.descTextField.text = [[self.detailItem valueForKey:@"desc"] description];
         self.dueDateField.text = [[self.detailItem valueForKey:@"duedate"] description];
-        self.doneSwitch.enabled = [[self.detailItem valueForKey:@"done"] description];
+        self.doneSwitch.selected = [[self.detailItem valueForKey:@"done"] boolValue];
         self.noteText.text = [[self.detailItem valueForKey:@"note"] description];
     }
     
@@ -50,13 +53,23 @@
 
 -(IBAction)cancelButtonTapped:(UIButton*)sender{
     
-    //self.textField.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+    [self configureView];
     
 }
 
--(IBAction)savedButtonTapped:(UIButton*)sender{
+//
+//  save data
+//
+- (IBAction)saveButtonClicked:(id)sender {
     
-    //[self.detailItem setValue:newDate  forKey:@"timeStamp"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+    
+    [self.detailItem setValue:self.descTextField.text  forKey:@"desc"];
+    [self.detailItem setValue:[dateFormatter dateFromString:self.dueDateField.text]
+                       forKey:@"duedate"];
+    [self.detailItem setValue:[NSNumber numberWithBool:self.doneSwitch.on] forKey:@"done"];
+    [self.detailItem setValue:self.noteText.text  forKey:@"note"];
     
     NSError *error = nil;
     if (![self.detailItem.managedObjectContext save:&error]) {
@@ -64,7 +77,8 @@
         abort();
     }
     
+    
+    
 }
-
 
 @end

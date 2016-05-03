@@ -96,7 +96,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ZGS-1Z-vYY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5fy-GV-MH6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="5fy-GV-MH6">
+                            <connections>
+                                <action selector="saveButtonClicked:" destination="xdV-Gb-eGi" id="Hsp-sh-3GA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descTextField" destination="gXq-aw-t4e" id="LEL-EZ-tYf"/>
@@ -150,7 +154,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="cXj-rw-J76" kind="showDetail" id="rww-YF-btS"/>
+                                    <segue destination="cXj-rw-J76" kind="showDetail" identifier="showDetail" id="rww-YF-btS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,11 +167,13 @@
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fix-xy-UEO">
                             <connections>
-                                <action selector="insertNewObject:" destination="7bK-jq-Zjz" id="wUC-iF-Aje"/>
-                                <segue destination="cXj-rw-J76" kind="showDetail" identifier="showDetail" id="yfO-iy-WKK"/>
+                                <action selector="insertNewObject:" destination="7bK-jq-Zjz" id="mN0-7m-uoa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="cXj-rw-J76" kind="showDetail" identifier="newDetail" id="fAf-5y-J6f"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,6 +199,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yfO-iy-WKK"/>
+        <segue reference="fAf-5y-J6f"/>
     </inferredMetricsTieBreakers>
 </document>
