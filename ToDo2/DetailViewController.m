@@ -16,6 +16,9 @@
 
 #pragma mark - Managing the detail item
 
+//
+//  new object value being set
+//
 - (void)setDetailItem:(id)newDetailItem {
     
     if (_detailItem != newDetailItem) {
@@ -26,6 +29,10 @@
     }
 }
 
+
+//
+//  set fields based on current object
+//
 - (void)configureView {
    
     if (self.detailItem) {
@@ -41,6 +48,9 @@
     
 }
 
+//
+//  build initial view
+//
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -50,7 +60,9 @@
 }
 
 
-
+//
+//  reload fields
+//
 -(IBAction)cancelButtonTapped:(UIButton*)sender{
     
     [self configureView];
@@ -62,6 +74,9 @@
 //
 - (IBAction)saveButtonClicked:(id)sender {
     
+    //
+    //  set object attributes
+    //
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
     
@@ -71,6 +86,9 @@
     [self.detailItem setValue:[NSNumber numberWithBool:self.doneSwitch.on] forKey:@"done"];
     [self.detailItem setValue:self.noteText.text  forKey:@"note"];
     
+    //
+    //  save object
+    //
     NSError *error = nil;
     if (![self.detailItem.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
