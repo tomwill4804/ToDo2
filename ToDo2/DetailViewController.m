@@ -120,9 +120,12 @@
 
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
     
-    if ([[segue identifier] isEqualToString:@"date"]) {
-        
-        DateViewController *vc = (DateViewController *)segue.sourceViewController;
+    DateViewController *vc = (DateViewController *)segue.sourceViewController;
+    
+    if ([[segue identifier] isEqualToString:@"dateClear"])
+        vc.date = nil;
+    
+    //if ([[segue identifier] isEqualToString:@"date"]) {
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateStyle = NSDateFormatterMediumStyle;
@@ -131,7 +134,8 @@
         NSString* sdate = [dateFormatter stringFromDate:self.rawdate];
         [self.dueDateField setTitle:sdate forState: UIControlStateNormal];
 
-    }
+    //}
+        
 
 }
 

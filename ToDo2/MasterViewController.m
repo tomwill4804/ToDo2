@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.title = @"ToDo";
    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     

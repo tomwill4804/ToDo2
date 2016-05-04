@@ -155,7 +155,7 @@
                                 <rect key="frame" x="228" y="311" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="iSe-fM-Ku6" kind="unwind" unwindAction="prepareForUnwind:" id="r2f-6p-IVp"/>
+                                    <segue destination="iSe-fM-Ku6" kind="unwind" identifier="dateOK" unwindAction="prepareForUnwind:" id="r2f-6p-IVp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skr-IS-mzQ">
@@ -165,12 +165,21 @@
                                     <segue destination="iSe-fM-Ku6" kind="unwind" identifier="date" unwindAction="prepareForUnwind:" id="kSo-4H-Dy3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u75-eG-RcA">
+                                <rect key="frame" x="157" y="311" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <segue destination="iSe-fM-Ku6" kind="unwind" identifier="dateClear" unwindAction="prepareForUnwind:" id="JpN-MZ-1ZB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="skr-IS-mzQ" firstAttribute="leading" secondItem="V3f-T8-z3a" secondAttribute="leadingMargin" constant="80" id="6EA-pl-oZt"/>
+                            <constraint firstItem="u75-eG-RcA" firstAttribute="baseline" secondItem="skr-IS-mzQ" secondAttribute="baseline" id="9RM-8u-D48"/>
                             <constraint firstItem="skr-IS-mzQ" firstAttribute="baseline" secondItem="uhv-59-XQQ" secondAttribute="baseline" id="FqE-EG-paD"/>
                             <constraint firstItem="376-4V-3W1" firstAttribute="top" secondItem="shU-kw-7L9" secondAttribute="bottom" constant="45" id="RSD-pd-3CG"/>
+                            <constraint firstItem="u75-eG-RcA" firstAttribute="leading" secondItem="skr-IS-mzQ" secondAttribute="trailing" constant="27" id="dqu-6G-1Zg"/>
                             <constraint firstItem="uhv-59-XQQ" firstAttribute="leading" secondItem="skr-IS-mzQ" secondAttribute="trailing" constant="98" id="hkg-M0-E3W"/>
                             <constraint firstItem="376-4V-3W1" firstAttribute="leading" secondItem="V3f-T8-z3a" secondAttribute="leadingMargin" id="sqm-r9-J3c"/>
                             <constraint firstItem="skr-IS-mzQ" firstAttribute="top" secondItem="376-4V-3W1" secondAttribute="bottom" constant="30" id="vp5-Jv-2P4"/>
