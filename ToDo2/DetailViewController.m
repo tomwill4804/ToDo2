@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "DateViewController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController ()<UIPopoverPresentationControllerDelegate>
 
 @end
 
@@ -110,6 +110,7 @@
     if ([[segue identifier] isEqualToString:@"date"]) {
         DateViewController *controller = (DateViewController *)[segue destinationViewController];
         controller.date = self.detailItem.duedate;
+        controller.popoverPresentationController.delegate = self;
     }
     
 }
@@ -130,7 +131,14 @@
 
     }
 
-
 }
+
+
+-(UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller{
+    
+    return UIModalPresentationNone;
+    
+}
+
 
 @end
