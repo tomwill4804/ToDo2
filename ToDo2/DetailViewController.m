@@ -39,14 +39,17 @@
    
     if (self.detailItem) {
         
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
         
-        self.descTextField.text = [[self.detailItem valueForKey:@"desc"] description];
-        [self.dueDateField setTitle:[[self.detailItem valueForKey:@"duedate"] description]
-                           forState: UIControlStateNormal];
+        self.descTextField.text = [self.detailItem valueForKey:@"desc"];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+        self.rawdate = [self.detailItem valueForKey:@"duedate"];
+        NSString* sdate = [dateFormatter stringFromDate:self.rawdate];
+        [self.dueDateField setTitle:sdate forState: UIControlStateNormal];
+        
         self.doneSwitch.on = [[self.detailItem valueForKey:@"done"] boolValue];
-        self.noteText.text = [[self.detailItem valueForKey:@"note"] description];
+        self.noteText.text = [self.detailItem valueForKey:@"note"];
     }
     
 }
@@ -80,12 +83,9 @@
     //
     //  set object attributes
     //
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
     
     [self.detailItem setValue:self.descTextField.text  forKey:@"desc"];
-    [self.detailItem setValue:[dateFormatter dateFromString:self.dueDateField.titleLabel.text]
-                       forKey:@"duedate"];
+    [self.detailItem setValue:self.rawdate forKey:@"duedate"];
     [self.detailItem setValue:[NSNumber numberWithBool:self.doneSwitch.on] forKey:@"done"];
     [self.detailItem setValue:self.noteText.text  forKey:@"note"];
     
@@ -116,12 +116,15 @@
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
     
     if ([[segue identifier] isEqualToString:@"date"]) {
+        
         DateViewController *vc = (DateViewController *)segue.sourceViewController;
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@""];
-        [self.detailItem setValue:vc.date forKey:@"duedate"];
-        [self.dueDateField setTitle:[[self.detailItem valueForKey:@"duedate"] description]
-                           forState: UIControlStateNormal];
+        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+        
+        self.rawdate = vc.date;
+        NSString* sdate = [dateFormatter stringFromDate:self.rawdate];
+        [self.dueDateField setTitle:sdate forState: UIControlStateNormal];
 
     }
 

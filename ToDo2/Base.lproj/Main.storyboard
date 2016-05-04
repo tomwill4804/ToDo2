@@ -134,11 +134,14 @@
                         <viewControllerLayoutGuide type="bottom" id="YwK-f3-tAe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V3f-T8-z3a">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="376-4V-3W1">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="376-4V-3W1">
                                 <rect key="frame" x="20" y="65" width="560" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Wm1-cC-wNw"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="484011880.137236">
                                     <!--2016-05-03 23:44:40 +0000-->
                                 </date>
@@ -146,15 +149,15 @@
                                     <action selector="dateChanged:" destination="d0H-Xa-lec" eventType="valueChanged" id="qMO-QO-6dH"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-59-XQQ">
-                                <rect key="frame" x="228" y="325" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-59-XQQ">
+                                <rect key="frame" x="228" y="311" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <segue destination="iSe-fM-Ku6" kind="unwind" unwindAction="prepareForUnwind:" id="r2f-6p-IVp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skr-IS-mzQ">
-                                <rect key="frame" x="100" y="325" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skr-IS-mzQ">
+                                <rect key="frame" x="100" y="311" width="30" height="30"/>
                                 <state key="normal" title="OK"/>
                                 <connections>
                                     <segue destination="iSe-fM-Ku6" kind="unwind" identifier="date" unwindAction="prepareForUnwind:" id="kSo-4H-Dy3"/>
@@ -163,13 +166,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="skr-IS-mzQ" firstAttribute="top" secondItem="376-4V-3W1" secondAttribute="bottom" constant="44" id="0Xk-0d-yFI"/>
-                            <constraint firstItem="uhv-59-XQQ" firstAttribute="leading" secondItem="skr-IS-mzQ" secondAttribute="trailing" constant="98" id="3kA-hJ-xUO"/>
-                            <constraint firstItem="376-4V-3W1" firstAttribute="leading" secondItem="V3f-T8-z3a" secondAttribute="leadingMargin" id="HWZ-hR-6Fe"/>
-                            <constraint firstItem="376-4V-3W1" firstAttribute="trailing" secondItem="V3f-T8-z3a" secondAttribute="trailingMargin" id="Mq3-ia-0AA"/>
-                            <constraint firstItem="skr-IS-mzQ" firstAttribute="leading" secondItem="V3f-T8-z3a" secondAttribute="leading" constant="100" id="RgB-8e-E7h"/>
-                            <constraint firstItem="376-4V-3W1" firstAttribute="top" secondItem="shU-kw-7L9" secondAttribute="bottom" constant="45" id="jRD-2o-AT9"/>
-                            <constraint firstItem="skr-IS-mzQ" firstAttribute="baseline" secondItem="uhv-59-XQQ" secondAttribute="baseline" id="mBu-t9-Omi"/>
+                            <constraint firstItem="skr-IS-mzQ" firstAttribute="leading" secondItem="V3f-T8-z3a" secondAttribute="leadingMargin" constant="80" id="6EA-pl-oZt"/>
+                            <constraint firstItem="skr-IS-mzQ" firstAttribute="baseline" secondItem="uhv-59-XQQ" secondAttribute="baseline" id="FqE-EG-paD"/>
+                            <constraint firstItem="376-4V-3W1" firstAttribute="top" secondItem="shU-kw-7L9" secondAttribute="bottom" constant="45" id="RSD-pd-3CG"/>
+                            <constraint firstItem="uhv-59-XQQ" firstAttribute="leading" secondItem="skr-IS-mzQ" secondAttribute="trailing" constant="98" id="hkg-M0-E3W"/>
+                            <constraint firstItem="376-4V-3W1" firstAttribute="leading" secondItem="V3f-T8-z3a" secondAttribute="leadingMargin" id="sqm-r9-J3c"/>
+                            <constraint firstItem="skr-IS-mzQ" firstAttribute="top" secondItem="376-4V-3W1" secondAttribute="bottom" constant="30" id="vp5-Jv-2P4"/>
                         </constraints>
                     </view>
                 </viewController>

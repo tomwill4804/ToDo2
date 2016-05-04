@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *doneSwitch;
 @property (weak, nonatomic) IBOutlet UITextView *noteText;
 
+@property (strong, nonatomic) NSDate* rawdate;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @end
