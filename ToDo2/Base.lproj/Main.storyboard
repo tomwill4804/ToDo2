@@ -67,7 +67,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QY-71-BOJ">
                                                     <rect key="frame" x="16" y="6" width="156" height="30"/>
                                                     <connections>
-                                                        <segue destination="d0H-Xa-lec" kind="popoverPresentation" popoverAnchorView="4QY-71-BOJ" id="Uiw-5z-Vcl">
+                                                        <segue destination="d0H-Xa-lec" kind="popoverPresentation" identifier="date" popoverAnchorView="4QY-71-BOJ" id="Uiw-5z-Vcl">
                                                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                         </segue>
                                                     </connections>
@@ -174,6 +174,9 @@
                             <constraint firstItem="skr-IS-mzQ" firstAttribute="top" secondItem="376-4V-3W1" secondAttribute="bottom" constant="30" id="vp5-Jv-2P4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="376-4V-3W1" id="CAm-iB-oZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZA5-0t-gVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="iSe-fM-Ku6" userLabel="Exit" sceneMemberID="exit"/>
@@ -210,23 +213,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="58.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-bb-non">
-                                            <rect key="frame" x="14" y="7" width="45" height="35.5"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-AS-7DV">
-                                            <rect key="frame" x="134" y="34" width="205" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-m3-Goh">
+                                            <rect key="frame" x="8" y="8" width="584" height="19"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGs-xe-ab0">
-                                            <rect key="frame" x="67" y="9" width="51" height="31"/>
-                                            <connections>
-                                                <action selector="donePushed:" destination="7bK-jq-Zjz" eventType="touchUpInside" id="Uyv-6Y-Mge"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-m3-Goh">
-                                            <rect key="frame" x="134" y="7" width="420" height="19"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-AS-7DV">
+                                            <rect key="frame" x="8" y="35" width="205" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -237,8 +231,6 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="rN9-AS-7DV" id="twM-X9-4Ks"/>
                                     <outlet property="descLabel" destination="HH4-m3-Goh" id="k5l-xW-0wc"/>
-                                    <outlet property="doneSwitch" destination="rGs-xe-ab0" id="fxo-m4-qRx"/>
-                                    <outlet property="image" destination="fnH-bb-non" id="boY-ty-cBU"/>
                                     <segue destination="cXj-rw-J76" kind="showDetail" identifier="showDetail" id="rww-YF-btS"/>
                                 </connections>
                             </tableViewCell>

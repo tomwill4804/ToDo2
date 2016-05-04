@@ -108,12 +108,18 @@
     
     MasterCell* mcell = (MasterCell*)cell;
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
-    
     mcell.descLabel.text = [[object valueForKey:@"desc"] description];
-    mcell.dateLabel.text = [[object valueForKey:@"duedate"] description];
-    mcell.doneSwitch.on = [[object valueForKey:@"done"] boolValue];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    NSDate* rawdate = [object valueForKey:@"duedate"];
+    NSString* sdate = [dateFormatter stringFromDate:rawdate];
+    mcell.dateLabel.text = sdate;
+
+    if ([[object valueForKey:@"done"] boolValue])
+        mcell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else
+        mcell.accessoryType = UITableViewCellAccessoryNone;
   
     
 }

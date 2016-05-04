@@ -11,5 +11,6 @@
 @interface DateViewController : UIViewController
 
 @property (copy, nonatomic) NSDate* date;
+@property (weak, nonatomic) IBOutlet UIDatePicker* datePicker;
 
 @end
