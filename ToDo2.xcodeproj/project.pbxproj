@@ -39,10 +39,10 @@
 		E3B66B181CD953EB007352BB /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
 		E3B66B1A1CD96B13007352BB /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		E3B66B1B1CD96B13007352BB /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
-		E3B66B301CD9A938007352BB /* ToDo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ToDo+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
-		E3B66B321CD9A938007352BB /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
-		E3B66B331CD9A938007352BB /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		E3B66B301CD9A938007352BB /* ToDo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ToDo+CoreDataProperties.h"; path = "../ToDo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ToDo+CoreDataProperties.m"; path = "../ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E3B66B321CD9A938007352BB /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = ../ToDo.h; sourceTree = "<group>"; };
+		E3B66B331CD9A938007352BB /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToDo.m; path = ../ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +59,6 @@
 		E3B66AEE1CD91645007352BB = {
 			isa = PBXGroup;
 			children = (
-				E3B66B301CD9A938007352BB /* ToDo+CoreDataProperties.h */,
-				E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */,
-				E3B66B321CD9A938007352BB /* ToDo.h */,
-				E3B66B331CD9A938007352BB /* ToDo.m */,
 				E3B66AF91CD91645007352BB /* ToDo2 */,
 				E3B66AF81CD91645007352BB /* Products */,
 			);
@@ -79,6 +75,10 @@
 		E3B66AF91CD91645007352BB /* ToDo2 */ = {
 			isa = PBXGroup;
 			children = (
+				E3B66B301CD9A938007352BB /* ToDo+CoreDataProperties.h */,
+				E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */,
+				E3B66B321CD9A938007352BB /* ToDo.h */,
+				E3B66B331CD9A938007352BB /* ToDo.m */,
 				E3B66AFD1CD91645007352BB /* AppDelegate.h */,
 				E3B66AFE1CD91645007352BB /* AppDelegate.m */,
 				E3B66B171CD953EB007352BB /* MasterCell.h */,
