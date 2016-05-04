@@ -17,6 +17,8 @@
 		E3B66B101CD91645007352BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3B66B0E1CD91645007352BB /* LaunchScreen.storyboard */; };
 		E3B66B191CD953EB007352BB /* MasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B181CD953EB007352BB /* MasterCell.m */; };
 		E3B66B1C1CD96B13007352BB /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B1B1CD96B13007352BB /* DateViewController.m */; };
+		E3B66B341CD9A938007352BB /* ToDo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */; };
+		E3B66B351CD9A938007352BB /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B66B331CD9A938007352BB /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		E3B66B181CD953EB007352BB /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
 		E3B66B1A1CD96B13007352BB /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		E3B66B1B1CD96B13007352BB /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
+		E3B66B301CD9A938007352BB /* ToDo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ToDo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E3B66B321CD9A938007352BB /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		E3B66B331CD9A938007352BB /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,10 @@
 		E3B66AEE1CD91645007352BB = {
 			isa = PBXGroup;
 			children = (
+				E3B66B301CD9A938007352BB /* ToDo+CoreDataProperties.h */,
+				E3B66B311CD9A938007352BB /* ToDo+CoreDataProperties.m */,
+				E3B66B321CD9A938007352BB /* ToDo.h */,
+				E3B66B331CD9A938007352BB /* ToDo.m */,
 				E3B66AF91CD91645007352BB /* ToDo2 */,
 				E3B66AF81CD91645007352BB /* Products */,
 			);
@@ -172,8 +182,10 @@
 				E3B66AFF1CD91645007352BB /* AppDelegate.m in Sources */,
 				E3B66B191CD953EB007352BB /* MasterCell.m in Sources */,
 				E3B66B021CD91645007352BB /* ToDo2.xcdatamodeld in Sources */,
+				E3B66B341CD9A938007352BB /* ToDo+CoreDataProperties.m in Sources */,
 				E3B66AFC1CD91645007352BB /* main.m in Sources */,
 				E3B66B1C1CD96B13007352BB /* DateViewController.m in Sources */,
+				E3B66B351CD9A938007352BB /* ToDo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +336,7 @@
 				E3B66B161CD91645007352BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -4,7 +4,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="todos" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ToDo" inverseName="group" inverseEntity="ToDo" syncable="YES"/>
     </entity>
-    <entity name="ToDo">
+    <entity name="ToDo" representedClassName="ToDo">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="done" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="duedate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -17,7 +17,7 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="ToDo" positionX="54" positionY="236" width="128" height="148"/>
         <element name="Group" positionX="-225" positionY="314" width="128" height="73"/>
+        <element name="ToDo" positionX="54" positionY="236" width="128" height="150"/>
     </elements>
 </model>

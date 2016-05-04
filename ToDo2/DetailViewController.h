@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "ToDo.h"
 
 @interface DetailViewController : UITableViewController
 
-@property (strong, nonatomic) NSManagedObject* detailItem;
+@property (strong, nonatomic) ToDo* detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *descTextField;

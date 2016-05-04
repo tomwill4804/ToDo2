@@ -39,17 +39,16 @@
    
     if (self.detailItem) {
         
-        
-        self.descTextField.text = [self.detailItem valueForKey:@"desc"];
+        self.descTextField.text = self.detailItem.desc;
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-        self.rawdate = [self.detailItem valueForKey:@"duedate"];
+        self.rawdate = self.detailItem.duedate;
         NSString* sdate = [dateFormatter stringFromDate:self.rawdate];
         [self.dueDateField setTitle:sdate forState: UIControlStateNormal];
         
-        self.doneSwitch.on = [[self.detailItem valueForKey:@"done"] boolValue];
-        self.noteText.text = [self.detailItem valueForKey:@"note"];
+        self.doneSwitch.on = [self.detailItem.done boolValue];
+        self.noteText.text = self.detailItem.note;
     }
     
 }
@@ -84,10 +83,11 @@
     //  set object attributes
     //
     
-    [self.detailItem setValue:self.descTextField.text  forKey:@"desc"];
-    [self.detailItem setValue:self.rawdate forKey:@"duedate"];
-    [self.detailItem setValue:[NSNumber numberWithBool:self.doneSwitch.on] forKey:@"done"];
-    [self.detailItem setValue:self.noteText.text  forKey:@"note"];
+    self.detailItem.desc = self.descTextField.text;
+    
+    self.detailItem.duedate = self.rawdate;
+    self.detailItem.done = [NSNumber numberWithBool:self.doneSwitch.on];
+    self.detailItem.note = self.noteText.text;
     
     //
     //  save object
@@ -107,7 +107,7 @@
     
     if ([[segue identifier] isEqualToString:@"date"]) {
         DateViewController *controller = (DateViewController *)[segue destinationViewController];
-        controller.date = [self.detailItem valueForKey:@"duedate"];
+        controller.date = self.detailItem.duedate;
     }
     
 }
