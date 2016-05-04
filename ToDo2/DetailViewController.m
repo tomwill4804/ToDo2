@@ -118,7 +118,11 @@
     if ([[segue identifier] isEqualToString:@"date"]) {
         DateViewController *vc = (DateViewController *)segue.sourceViewController;
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"dd-MM-YYYY HH:mm:ss"];
+        [dateFormatter setDateFormat:@""];
+        [self.detailItem setValue:vc.date forKey:@"duedate"];
+        [self.dueDateField setTitle:[[self.detailItem valueForKey:@"duedate"] description]
+                           forState: UIControlStateNormal];
+
     }
 
 

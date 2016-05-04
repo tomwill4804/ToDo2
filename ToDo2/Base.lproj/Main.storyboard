@@ -116,6 +116,7 @@
                     <connections>
                         <outlet property="descTextField" destination="gXq-aw-t4e" id="LEL-EZ-tYf"/>
                         <outlet property="doneSwitch" destination="9JL-Ws-dxX" id="Bvu-NC-SXk"/>
+                        <outlet property="dueDateField" destination="4QY-71-BOJ" id="Gvl-9K-Idq"/>
                         <outlet property="noteText" destination="etI-eY-u1R" id="ivn-6w-x7x"/>
                         <outlet property="saveButton" destination="5fy-GV-MH6" id="FL4-77-lYy"/>
                     </connections>
@@ -124,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="763" y="111"/>
         </scene>
-        <!--View Controller-->
+        <!--Date View Controller-->
         <scene sceneID="H28-Hl-m8A">
             <objects>
-                <viewController id="d0H-Xa-lec" sceneMemberID="viewController">
+                <viewController id="d0H-Xa-lec" customClass="DateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="shU-kw-7L9"/>
                         <viewControllerLayoutGuide type="bottom" id="YwK-f3-tAe"/>
@@ -141,6 +142,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="484011880.137236">
                                     <!--2016-05-03 23:44:40 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="d0H-Xa-lec" eventType="valueChanged" id="qMO-QO-6dH"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-59-XQQ">
                                 <rect key="frame" x="228" y="325" width="48" height="30"/>

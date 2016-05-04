@@ -10,6 +10,6 @@
 
 @interface DateViewController : UIViewController
 
-@property (weak, nonatomic) NSDate* date;
+@property (copy, nonatomic) NSDate* date;
 
 @end

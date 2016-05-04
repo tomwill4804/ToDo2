@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.date = [[NSDate alloc] init];
     
 
 }
@@ -24,6 +25,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
+    
+}
+
+-(IBAction)dateChanged:(UIDatePicker*)sender{
+    
+    self.date = sender.date;
+    
     
 }
 
