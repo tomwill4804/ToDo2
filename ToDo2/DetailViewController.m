@@ -59,6 +59,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.title = self.detailItem.desc;
 
     [self configureView];
     
