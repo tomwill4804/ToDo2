@@ -119,9 +119,11 @@
                         <outlet property="dueDateField" destination="4QY-71-BOJ" id="Gvl-9K-Idq"/>
                         <outlet property="noteText" destination="etI-eY-u1R" id="ivn-6w-x7x"/>
                         <outlet property="saveButton" destination="5fy-GV-MH6" id="FL4-77-lYy"/>
+                        <segue destination="8xH-IC-dk5" kind="unwind" identifier="exit" unwindAction="prepareForUnwindX:" id="nlB-U3-2QT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bot-np-w5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8xH-IC-dk5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="763" y="111"/>
         </scene>
@@ -221,7 +223,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-AS-7DV">
                                             <rect key="frame" x="8" y="35" width="205" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>

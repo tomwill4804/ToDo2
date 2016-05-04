@@ -97,6 +97,8 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    else
+        [self performSegueWithIdentifier:@"exit" sender:self];
     
 
 }
